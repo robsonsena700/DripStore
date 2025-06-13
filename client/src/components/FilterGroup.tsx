@@ -76,15 +76,15 @@ export default function FilterGroup({ onFiltersChange }: FilterGroupProps) {
     <Card className="sticky top-24">
       <CardContent className="p-6">
         <div className="flex items-center justify-between mb-6">
-          <h3 className="text-xl font-bold text-drip-black">FILTERS</h3>
-          <Button variant="ghost" onClick={clearFilters} className="text-drip-gray hover:text-drip-orange">
+          <h3 className="text-xl font-bold text-dark-gray">FILTERS</h3>
+          <Button variant="ghost" onClick={clearFilters} className="text-light-gray hover:text-primary-color">
             Clear All
           </Button>
         </div>
         
         {/* Category Filter */}
         <div className="mb-6">
-          <h4 className="font-semibold mb-3 text-drip-black">Category</h4>
+          <h4 className="font-semibold mb-3 text-dark-gray">Category</h4>
           <div className="space-y-2">
             {categories.map((category) => (
               <div key={category.id} className="flex items-center space-x-2">
@@ -92,9 +92,9 @@ export default function FilterGroup({ onFiltersChange }: FilterGroupProps) {
                   id={category.id}
                   checked={filters.categories.includes(category.id)}
                   onCheckedChange={(checked) => handleCategoryChange(category.id, checked as boolean)}
-                  className="data-[state=checked]:bg-drip-orange data-[state=checked]:border-drip-orange"
+                  className="data-[state=checked]:bg-primary-color data-[state=checked]:border-primary-color"
                 />
-                <Label htmlFor={category.id} className="text-drip-gray cursor-pointer">
+                <Label htmlFor={category.id} className="text-light-gray cursor-pointer">
                   {category.label}
                 </Label>
               </div>
@@ -104,16 +104,16 @@ export default function FilterGroup({ onFiltersChange }: FilterGroupProps) {
         
         {/* Price Range */}
         <div className="mb-6">
-          <h4 className="font-semibold mb-3 text-drip-black">Price Range</h4>
+          <h4 className="font-semibold mb-3 text-dark-gray">Price Range</h4>
           <RadioGroup value={filters.priceRange} onValueChange={handlePriceRangeChange}>
             {priceRanges.map((range) => (
               <div key={range.id} className="flex items-center space-x-2">
                 <RadioGroupItem 
                   value={range.id} 
                   id={range.id}
-                  className="text-drip-orange border-drip-orange data-[state=checked]:bg-drip-orange"
+                  className="text-primary-color border-primary-color data-[state=checked]:bg-primary-color"
                 />
-                <Label htmlFor={range.id} className="text-drip-gray cursor-pointer">
+                <Label htmlFor={range.id} className="text-light-gray cursor-pointer">
                   {range.label}
                 </Label>
               </div>
@@ -123,7 +123,7 @@ export default function FilterGroup({ onFiltersChange }: FilterGroupProps) {
         
         {/* Size Filter */}
         <div className="mb-6">
-          <h4 className="font-semibold mb-3 text-drip-black">Size</h4>
+          <h4 className="font-semibold mb-3 text-dark-gray">Size</h4>
           <div className="grid grid-cols-3 gap-2">
             {sizes.map((size) => (
               <Button
@@ -133,8 +133,8 @@ export default function FilterGroup({ onFiltersChange }: FilterGroupProps) {
                 onClick={() => handleSizeToggle(size)}
                 className={`${
                   filters.sizes.includes(size)
-                    ? "border-drip-orange bg-drip-orange text-white"
-                    : "border-gray-300 hover:border-drip-orange hover:text-drip-orange"
+                    ? "border-primary-color bg-primary-color text-white"
+                    : "border-light-gray-2 hover:border-primary-color hover:text-primary-color"
                 } transition-colors`}
               >
                 {size}
