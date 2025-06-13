@@ -22,20 +22,20 @@ export default function HomePage() {
         />
         <div className="relative max-w-2xl">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-            STREET<br />
-            <span className="text-drip-orange">CULTURE</span>
+            MODA<br />
+            <span className="text-primary-color">URBANA</span>
           </h1>
           <p className="text-xl mb-8 text-gray-300">
-            Discover the latest drops in streetwear fashion. Authentic styles that define your unique aesthetic.
+            Descubra os melhores tênis, camisetas, calças e bonés. Estilo autêntico para quem tem personalidade.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/products">
-              <Button className="bg-drip-orange hover:bg-orange-600 text-white px-8 py-4 rounded-lg font-semibold transition-colors transform hover:scale-105">
-                SHOP NOW
+              <Button className="bg-primary-color hover:bg-tertiary-color text-white px-8 py-4 rounded-lg font-semibold transition-colors transform hover:scale-105">
+                COMPRAR AGORA
               </Button>
             </Link>
             <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-all">
-              VIEW LOOKBOOK
+              VER COLEÇÃO
             </Button>
           </div>
         </div>
@@ -44,9 +44,9 @@ export default function HomePage() {
       {/* Featured Products Section */}
       <Section backgroundColor="gray" padding="medium">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-drip-black mb-4">FEATURED DROPS</h2>
-          <p className="text-drip-gray text-lg max-w-2xl mx-auto">
-            Curated selection of the most sought-after pieces from top streetwear brands
+          <h2 className="text-4xl font-bold text-dark-gray mb-4">PRODUTOS EM DESTAQUE</h2>
+          <p className="text-light-gray text-lg max-w-2xl mx-auto">
+            Seleção especial dos melhores tênis, camisetas, calças e bonés para o seu estilo
           </p>
         </div>
 
@@ -71,52 +71,68 @@ export default function HomePage() {
       {/* Categories Section */}
       <Section backgroundColor="white" padding="medium">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-drip-black mb-4">SHOP BY CATEGORY</h2>
+          <h2 className="text-4xl font-bold text-dark-gray mb-4">CATEGORIAS</h2>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <Link href="/products?category=clothing">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <Link href="/products?category=tenis">
             <div className="relative group cursor-pointer overflow-hidden rounded-2xl">
               <img
-                src="https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                alt="Clothing Category"
+                src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                alt="Tênis"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
                 <div className="text-center text-white">
-                  <h3 className="text-3xl font-bold mb-2">CLOTHING</h3>
-                  <p className="text-lg">Hoodies, Tees, Jackets</p>
+                  <h3 className="text-3xl font-bold mb-2">TÊNIS</h3>
+                  <p className="text-lg">Esportivos, Casuais, Urbanos</p>
                 </div>
               </div>
             </div>
           </Link>
           
-          <Link href="/products?category=footwear">
+          <Link href="/products?category=camiseta">
             <div className="relative group cursor-pointer overflow-hidden rounded-2xl">
               <img
-                src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                alt="Footwear Category"
+                src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                alt="Camisetas"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
                 <div className="text-center text-white">
-                  <h3 className="text-3xl font-bold mb-2">FOOTWEAR</h3>
-                  <p className="text-lg">Sneakers, Boots, Slides</p>
+                  <h3 className="text-3xl font-bold mb-2">CAMISETAS</h3>
+                  <p className="text-lg">Básicas, Estampadas, Polos</p>
                 </div>
               </div>
             </div>
           </Link>
           
-          <Link href="/products?category=accessories">
+          <Link href="/products?category=calca">
             <div className="relative group cursor-pointer overflow-hidden rounded-2xl">
               <img
-                src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
-                alt="Accessories Category"
+                src="https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                alt="Calças"
                 className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
                 <div className="text-center text-white">
-                  <h3 className="text-3xl font-bold mb-2">ACCESSORIES</h3>
-                  <p className="text-lg">Caps, Bags, Jewelry</p>
+                  <h3 className="text-3xl font-bold mb-2">CALÇAS</h3>
+                  <p className="text-lg">Jeans, Joggers, Chinos</p>
+                </div>
+              </div>
+            </div>
+          </Link>
+          
+          <Link href="/products?category=bone">
+            <div className="relative group cursor-pointer overflow-hidden rounded-2xl">
+              <img
+                src="https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600"
+                alt="Bonés"
+                className="w-full h-80 object-cover group-hover:scale-110 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-black bg-opacity-40 group-hover:bg-opacity-60 transition-all duration-300 flex items-center justify-center">
+                <div className="text-center text-white">
+                  <h3 className="text-3xl font-bold mb-2">BONÉS</h3>
+                  <p className="text-lg">Snapbacks, Dad Hats, Truckers</p>
                 </div>
               </div>
             </div>

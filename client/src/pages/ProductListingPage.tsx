@@ -69,11 +69,13 @@ export default function ProductListingPage() {
         const price = parseFloat(product.price);
         switch (filters.priceRange) {
           case "0-50":
-            return price < 50;
-          case "50-100":
-            return price >= 50 && price <= 100;
-          case "100+":
-            return price > 100;
+            return price <= 50;
+          case "50-150":
+            return price > 50 && price <= 150;
+          case "150-300":
+            return price > 150 && price <= 300;
+          case "300+":
+            return price > 300;
           default:
             return true;
         }

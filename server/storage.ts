@@ -43,84 +43,194 @@ export class MemStorage implements IStorage {
 
   private initializeProducts() {
     const sampleProducts: InsertProduct[] = [
+      // TÊNIS
       {
-        name: "Premium Black Hoodie",
-        description: "Essential streetwear piece with premium cotton blend. Crafted for ultimate comfort and durability with modern fit and reinforced stitching.",
-        price: "89.99",
-        category: "clothing",
-        brand: "DripStore",
+        name: "Air Max Classic",
+        description: "Tênis esportivo com tecnologia de amortecimento avançada. Ideal para corridas e uso casual com design moderno e confortável.",
+        price: "299.99",
+        category: "tenis",
+        brand: "SportMax",
         images: [
-          "https://images.unsplash.com/photo-1556821840-3a63f95609a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
-          "https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
-          "https://images.unsplash.com/photo-1614676471928-2ed0ad1061a4?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
-          "https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
+          "https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
+          "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
         ],
-        sizes: ["XS", "S", "M", "L", "XL", "XXL"],
-        colors: ["Black", "Charcoal", "White", "Navy"],
+        sizes: ["35", "36", "37", "38", "39", "40", "41", "42", "43", "44"],
+        colors: ["Branco", "Preto", "Azul", "Vermelho"],
         featured: true,
-        badge: "NEW",
+        badge: "NOVO",
         rating: "4.8",
-        reviewCount: 127
+        reviewCount: 156
       },
       {
-        name: "Vintage Denim Jacket",
-        description: "Classic denim with modern streetwear fit. Authentic vintage wash with contemporary styling.",
-        price: "124.99",
-        category: "clothing",
-        brand: "DripStore",
+        name: "Urban Runner",
+        description: "Tênis urbano perfeito para o dia a dia. Combina estilo e conforto com sola antiderrapante e design versátil.",
+        price: "189.99",
+        category: "tenis",
+        brand: "UrbanFeet",
         images: [
-          "https://images.unsplash.com/photo-1544022613-e87ca75a784a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
+          "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
         ],
-        sizes: ["XS", "S", "M", "L", "XL"],
-        colors: ["Blue", "Black", "Light Blue"],
+        sizes: ["35", "36", "37", "38", "39", "40", "41", "42", "43"],
+        colors: ["Preto", "Branco", "Cinza"],
         featured: true,
         rating: "4.6",
+        reviewCount: 92
+      },
+      {
+        name: "Retro Basketball",
+        description: "Tênis de basquete retrô com cano alto. Design clássico dos anos 80 com tecnologia moderna para máximo conforto.",
+        price: "349.99",
+        category: "tenis",
+        brand: "RetroSport",
+        images: [
+          "https://images.unsplash.com/photo-1551107696-a4b0c5a0d9a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
+        ],
+        sizes: ["36", "37", "38", "39", "40", "41", "42", "43", "44"],
+        colors: ["Branco/Vermelho", "Preto/Branco", "Azul/Branco"],
+        badge: "LIMITADO",
+        rating: "4.9",
+        reviewCount: 78
+      },
+
+      // CAMISETAS
+      {
+        name: "Camiseta Básica Premium",
+        description: "Camiseta 100% algodão com corte moderno. Tecido macio e respirável, perfeita para o uso diário.",
+        price: "39.99",
+        category: "camiseta",
+        brand: "BasicWear",
+        images: [
+          "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
+          "https://images.unsplash.com/photo-1503341504253-dff4815485f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
+        ],
+        sizes: ["P", "M", "G", "GG", "XGG"],
+        colors: ["Branco", "Preto", "Cinza", "Azul", "Verde"],
+        featured: true,
+        rating: "4.7",
+        reviewCount: 234
+      },
+      {
+        name: "Camiseta Estampada Urbana",
+        description: "Camiseta com estampa exclusiva inspirada na cultura urbana. Design único e moderno para quem tem personalidade.",
+        price: "59.99",
+        category: "camiseta",
+        brand: "UrbanStyle",
+        images: [
+          "https://images.unsplash.com/photo-1576566588028-4147f3842f27?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
+        ],
+        sizes: ["P", "M", "G", "GG"],
+        colors: ["Preto", "Branco", "Azul Marinho"],
+        badge: "NOVO",
+        rating: "4.5",
         reviewCount: 89
       },
       {
-        name: "Limited Edition Sneakers",
-        description: "Exclusive colorway, limited quantities available. Premium materials and craftsmanship.",
-        price: "199.99",
-        category: "footwear",
-        brand: "DripStore",
+        name: "Camiseta Polo Clássica",
+        description: "Polo elegante em piquet de algodão. Ideal para ocasiões casuais e semi-formais com acabamento refinado.",
+        price: "79.99",
+        category: "camiseta",
+        brand: "ClassicPolo",
         images: [
-          "https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
+          "https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
         ],
-        sizes: ["7", "8", "9", "10", "11", "12"],
-        colors: ["White", "Black", "Red"],
+        sizes: ["P", "M", "G", "GG", "XGG"],
+        colors: ["Azul Marinho", "Branco", "Preto", "Verde"],
+        rating: "4.6",
+        reviewCount: 145
+      },
+
+      // CALÇAS
+      {
+        name: "Calça Jeans Skinny",
+        description: "Jeans com modelagem skinny e lavagem moderna. Tecido com elastano para maior conforto e mobilidade.",
+        price: "119.99",
+        category: "calca",
+        brand: "DenimPro",
+        images: [
+          "https://images.unsplash.com/photo-1542272604-787c3835535d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
+          "https://images.unsplash.com/photo-1475178626620-a4d074967452?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
+        ],
+        sizes: ["36", "38", "40", "42", "44", "46", "48"],
+        colors: ["Azul Escuro", "Azul Claro", "Preto", "Cinza"],
         featured: true,
-        badge: "LIMITED",
-        rating: "4.9",
-        reviewCount: 245
+        rating: "4.4",
+        reviewCount: 178
       },
       {
-        name: "Street Cap Collection",
-        description: "Signature embroidered designs with premium construction and authentic streetwear aesthetic.",
-        price: "34.99",
-        category: "accessories",
-        brand: "DripStore",
+        name: "Calça Jogger Esportiva",
+        description: "Calça jogger em tecido tecnológico com ajuste no punho. Ideal para treinos e atividades casuais.",
+        price: "89.99",
+        category: "calca",
+        brand: "SportFlex",
         images: [
-          "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
+          "https://images.unsplash.com/photo-1506629905963-b3b4d2d8547d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
         ],
-        sizes: ["One Size"],
-        colors: ["Black", "White", "Red", "Navy"],
-        featured: true,
-        rating: "4.5",
+        sizes: ["P", "M", "G", "GG", "XGG"],
+        colors: ["Preto", "Cinza", "Azul Marinho", "Verde"],
+        badge: "NOVO",
+        rating: "4.7",
+        reviewCount: 96
+      },
+      {
+        name: "Calça Chino Premium",
+        description: "Calça chino de algodão premium com corte slim. Versatilidade para looks casuais e sociais.",
+        price: "149.99",
+        category: "calca",
+        brand: "PremiumFit",
+        images: [
+          "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
+        ],
+        sizes: ["36", "38", "40", "42", "44", "46"],
+        colors: ["Bege", "Azul Marinho", "Preto", "Verde Oliva"],
+        rating: "4.8",
         reviewCount: 67
       },
+
+      // BONÉS
       {
-        name: "Street Art Graphic Tee",
-        description: "Limited edition design collaboration with authentic street art aesthetic.",
-        price: "45.99",
-        category: "clothing",
-        brand: "DripStore",
+        name: "Boné Snapback Classic",
+        description: "Boné snapback com aba reta e ajuste traseiro. Design clássico e versátil para completar qualquer look.",
+        price: "49.99",
+        category: "bone",
+        brand: "CapStyle",
         images: [
-          "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
+          "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800",
+          "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
         ],
-        sizes: ["XS", "S", "M", "L", "XL"],
-        colors: ["Black", "White", "Grey"],
-        rating: "4.7",
-        reviewCount: 156
+        sizes: ["Único"],
+        colors: ["Preto", "Branco", "Azul", "Vermelho", "Cinza"],
+        featured: true,
+        rating: "4.5",
+        reviewCount: 123
+      },
+      {
+        name: "Boné Dad Hat Vintage",
+        description: "Boné dad hat com aba curva e ajuste de velcro. Estilo retrô com acabamento vintage e confortável.",
+        price: "39.99",
+        category: "bone",
+        brand: "VintageStyle",
+        images: [
+          "https://images.unsplash.com/photo-1575428652377-a1d7a98ebf52?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
+        ],
+        sizes: ["Único"],
+        colors: ["Bege", "Preto", "Azul Marinho", "Verde"],
+        badge: "NOVO",
+        rating: "4.3",
+        reviewCount: 89
+      },
+      {
+        name: "Boné Trucker Mesh",
+        description: "Boné trucker com tela nas laterais para maior ventilação. Ideal para atividades ao ar livre e esportes.",
+        price: "44.99",
+        category: "bone",
+        brand: "OutdoorCap",
+        images: [
+          "https://images.unsplash.com/photo-1521369909029-2afed882baee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=800"
+        ],
+        sizes: ["Único"],
+        colors: ["Preto/Branco", "Azul/Branco", "Vermelho/Branco"],
+        rating: "4.6",
+        reviewCount: 76
       }
     ];
 

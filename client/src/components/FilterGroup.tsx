@@ -23,18 +23,20 @@ export default function FilterGroup({ onFiltersChange }: FilterGroupProps) {
   });
 
   const categories = [
-    { id: "clothing", label: "Clothing" },
-    { id: "footwear", label: "Footwear" },
-    { id: "accessories", label: "Accessories" },
+    { id: "tenis", label: "Tênis" },
+    { id: "camiseta", label: "Camisetas" },
+    { id: "calca", label: "Calças" },
+    { id: "bone", label: "Bonés" },
   ];
 
   const priceRanges = [
-    { id: "0-50", label: "Under $50" },
-    { id: "50-100", label: "$50 - $100" },
-    { id: "100+", label: "Over $100" },
+    { id: "0-50", label: "Até R$ 50" },
+    { id: "50-150", label: "R$ 50 - R$ 150" },
+    { id: "150-300", label: "R$ 150 - R$ 300" },
+    { id: "300+", label: "Acima de R$ 300" },
   ];
 
-  const sizes = ["XS", "S", "M", "L", "XL", "XXL"];
+  const sizes = ["P", "M", "G", "GG", "XGG", "35", "36", "37", "38", "39", "40", "41", "42", "43", "44", "Único"];
 
   const handleCategoryChange = (categoryId: string, checked: boolean) => {
     const newCategories = checked
