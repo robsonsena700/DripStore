@@ -4,30 +4,46 @@
 
 :root {
   --background: hsl(0, 0%, 100%);
-  --foreground: hsl(20, 14.3%, 4.1%);
-  --muted: hsl(60, 4.8%, 95.9%);
-  --muted-foreground: hsl(25, 5.3%, 44.7%);
+  --foreground: hsl(0, 0%, 12.2%);
+  --muted: hsl(0, 0%, 96.1%);
+  --muted-foreground: hsl(0, 0%, 56.1%);
   --popover: hsl(0, 0%, 100%);
-  --popover-foreground: hsl(20, 14.3%, 4.1%);
+  --popover-foreground: hsl(0, 0%, 12.2%);
   --card: hsl(0, 0%, 100%);
-  --card-foreground: hsl(20, 14.3%, 4.1%);
-  --border: hsl(20, 5.9%, 90%);
-  --input: hsl(20, 5.9%, 90%);
-  --primary: hsl(207, 90%, 54%);
-  --primary-foreground: hsl(211, 100%, 99%);
-  --secondary: hsl(60, 4.8%, 95.9%);
-  --secondary-foreground: hsl(24, 9.8%, 10%);
-  --accent: hsl(60, 4.8%, 95.9%);
-  --accent-foreground: hsl(24, 9.8%, 10%);
-  --destructive: hsl(0, 84.2%, 60.2%);
-  --destructive-foreground: hsl(60, 9.1%, 97.8%);
-  --ring: hsl(20, 14.3%, 4.1%);
+  --card-foreground: hsl(0, 0%, 12.2%);
+  --border: hsl(0, 0%, 80%);
+  --input: hsl(0, 0%, 80%);
+  --primary: hsl(327, 73%, 47%);
+  --primary-foreground: hsl(0, 0%, 100%);
+  --secondary: hsl(243, 75%, 84%);
+  --secondary-foreground: hsl(0, 0%, 12.2%);
+  --accent: hsl(327, 73%, 47%);
+  --accent-foreground: hsl(0, 0%, 100%);
+  --destructive: hsl(348, 83%, 67%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+  --success: hsl(142, 76%, 56%);
+  --success-foreground: hsl(0, 0%, 100%);
+  --warning: hsl(40, 94%, 55%);
+  --warning-foreground: hsl(0, 0%, 0%);
+  --ring: hsl(327, 73%, 47%);
   --radius: 0.5rem;
   
-  /* Custom Drip Store Colors */
-  --drip-orange: hsl(14, 100%, 60%);
-  --drip-black: hsl(0, 0%, 0%);
-  --drip-gray: hsl(210, 6%, 46%);
+  /* DRIP Store Color Palette */
+  --primary-color: hsl(327, 73%, 47%); /* #C92071 */
+  --secondary-color: hsl(243, 75%, 84%); /* #B5B6F2 */
+  --tertiary-color: hsl(327, 73%, 29%); /* #991956 */
+  --error-color: hsl(348, 83%, 67%); /* #EE4266 */
+  --success-color: hsl(142, 76%, 56%); /* #52CA76 */
+  --warning-color: hsl(40, 94%, 55%); /* #F6AA1C */
+  
+  /* Grayscale */
+  --dark-gray: hsl(0, 0%, 12.2%); /* #1F1F1F */
+  --dark-gray-2: hsl(0, 0%, 27.8%); /* #474747 */
+  --dark-gray-3: hsl(0, 0%, 40%); /* #666666 */
+  --light-gray: hsl(0, 0%, 56.1%); /* #8F8F8F */
+  --light-gray-2: hsl(0, 0%, 80%); /* #CCCCCC */
+  --light-gray-3: hsl(0, 0%, 96.1%); /* #F5F5F5 */
+  --white: hsl(0, 0%, 100%); /* #FFFFFF */
 }
 
 .dark {
@@ -65,59 +81,146 @@
 }
 
 @layer utilities {
-  .text-drip-orange {
-    color: var(--drip-orange);
+  /* Primary Colors */
+  .text-primary-color {
+    color: var(--primary-color);
   }
   
-  .text-drip-black {
-    color: var(--drip-black);
+  .text-secondary-color {
+    color: var(--secondary-color);
   }
   
-  .text-drip-gray {
-    color: var(--drip-gray);
+  .text-tertiary-color {
+    color: var(--tertiary-color);
   }
   
-  .bg-drip-orange {
-    background-color: var(--drip-orange);
+  .bg-primary-color {
+    background-color: var(--primary-color);
   }
   
-  .bg-drip-black {
-    background-color: var(--drip-black);
+  .bg-secondary-color {
+    background-color: var(--secondary-color);
   }
   
-  .bg-drip-gray {
-    background-color: var(--drip-gray);
+  .bg-tertiary-color {
+    background-color: var(--tertiary-color);
   }
   
-  .border-drip-orange {
-    border-color: var(--drip-orange);
+  /* Status Colors */
+  .text-error {
+    color: var(--error-color);
   }
   
-  .border-drip-black {
-    border-color: var(--drip-black);
+  .text-success {
+    color: var(--success-color);
   }
   
-  .ring-drip-orange {
-    --tw-ring-color: var(--drip-orange);
+  .text-warning {
+    color: var(--warning-color);
   }
   
-  .hover\:bg-drip-orange:hover {
-    background-color: var(--drip-orange);
+  .bg-error {
+    background-color: var(--error-color);
   }
   
-  .hover\:text-drip-orange:hover {
-    color: var(--drip-orange);
+  .bg-success {
+    background-color: var(--success-color);
   }
   
-  .hover\:border-drip-orange:hover {
-    border-color: var(--drip-orange);
+  .bg-warning {
+    background-color: var(--warning-color);
   }
   
-  .focus\:ring-drip-orange:focus {
-    --tw-ring-color: var(--drip-orange);
+  /* Grayscale */
+  .text-dark-gray {
+    color: var(--dark-gray);
   }
   
-  .focus\:border-drip-orange:focus {
-    border-color: var(--drip-orange);
+  .text-dark-gray-2 {
+    color: var(--dark-gray-2);
+  }
+  
+  .text-dark-gray-3 {
+    color: var(--dark-gray-3);
+  }
+  
+  .text-light-gray {
+    color: var(--light-gray);
+  }
+  
+  .text-light-gray-2 {
+    color: var(--light-gray-2);
+  }
+  
+  .text-light-gray-3 {
+    color: var(--light-gray-3);
+  }
+  
+  .bg-dark-gray {
+    background-color: var(--dark-gray);
+  }
+  
+  .bg-dark-gray-2 {
+    background-color: var(--dark-gray-2);
+  }
+  
+  .bg-dark-gray-3 {
+    background-color: var(--dark-gray-3);
+  }
+  
+  .bg-light-gray {
+    background-color: var(--light-gray);
+  }
+  
+  .bg-light-gray-2 {
+    background-color: var(--light-gray-2);
+  }
+  
+  .bg-light-gray-3 {
+    background-color: var(--light-gray-3);
+  }
+  
+  /* Border Colors */
+  .border-primary-color {
+    border-color: var(--primary-color);
+  }
+  
+  .border-secondary-color {
+    border-color: var(--secondary-color);
+  }
+  
+  .border-tertiary-color {
+    border-color: var(--tertiary-color);
+  }
+  
+  .border-light-gray-2 {
+    border-color: var(--light-gray-2);
+  }
+  
+  /* Ring Colors */
+  .ring-primary-color {
+    --tw-ring-color: var(--primary-color);
+  }
+  
+  /* Hover States */
+  .hover\:bg-primary-color:hover {
+    background-color: var(--primary-color);
+  }
+  
+  .hover\:text-primary-color:hover {
+    color: var(--primary-color);
+  }
+  
+  .hover\:border-primary-color:hover {
+    border-color: var(--primary-color);
+  }
+  
+  /* Focus States */
+  .focus\:ring-primary-color:focus {
+    --tw-ring-color: var(--primary-color);
+  }
+  
+  .focus\:border-primary-color:focus {
+    border-color: var(--primary-color);
   }
 }

@@ -7,23 +7,18 @@ import NotFound from "@/pages/not-found";
 import HomePage from "@/pages/HomePage";
 import ProductListingPage from "@/pages/ProductListingPage";
 import ProductViewPage from "@/pages/ProductViewPage";
-import Header from "@/components/Header";
-import Footer from "@/components/Footer";
+import Layout from "@/pages/Layout";
 
 function Router() {
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        <Switch>
-          <Route path="/" component={HomePage} />
-          <Route path="/products" component={ProductListingPage} />
-          <Route path="/products/:id" component={ProductViewPage} />
-          <Route component={NotFound} />
-        </Switch>
-      </main>
-      <Footer />
-    </div>
+    <Layout>
+      <Switch>
+        <Route path="/" component={HomePage} />
+        <Route path="/products" component={ProductListingPage} />
+        <Route path="/products/:id" component={ProductViewPage} />
+        <Route component={NotFound} />
+      </Switch>
+    </Layout>
   );
 }
 
