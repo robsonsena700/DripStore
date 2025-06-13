@@ -75,7 +75,7 @@ export default function ProductCard({ product }: ProductCardProps) {
             <div className="absolute top-4 left-4">
               <Badge 
                 className={`text-white px-3 py-1 rounded-full text-sm font-semibold ${
-                  product.badge === "LIMITED" ? "bg-red-500" : "bg-drip-orange"
+                  product.badge === "LIMITED" ? "bg-error" : "bg-primary-color"
                 }`}
               >
                 {product.badge}
@@ -94,14 +94,14 @@ export default function ProductCard({ product }: ProductCardProps) {
           </div>
         </div>
         <CardContent className="p-6">
-          <h3 className="font-semibold text-lg mb-2 text-drip-black">{product.name}</h3>
-          <p className="text-drip-gray mb-4 line-clamp-2">{product.description}</p>
+          <h3 className="font-semibold text-lg mb-2 text-dark-gray">{product.name}</h3>
+          <p className="text-light-gray mb-4 line-clamp-2">{product.description}</p>
           <div className="flex items-center justify-between">
-            <span className="text-2xl font-bold text-drip-black">${product.price}</span>
+            <span className="text-2xl font-bold text-dark-gray">${product.price}</span>
             <Button
               onClick={handleAddToCart}
               disabled={addToCartMutation.isPending}
-              className="bg-drip-black text-white px-4 py-2 rounded-lg hover:bg-drip-orange transition-colors"
+              className="bg-dark-gray text-white px-4 py-2 rounded-lg hover:bg-primary-color transition-colors"
             >
               {addToCartMutation.isPending ? "Adding..." : "Add to Cart"}
             </Button>

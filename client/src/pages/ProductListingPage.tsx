@@ -16,20 +16,41 @@ export default function ProductListingPage() {
   });
   const [sortBy, setSortBy] = useState("featured");
 
-  // Extract category from URL params
+  // Extract category and search from URL params
   useEffect(() => {
     const urlParams = new URLSearchParams(location.split('?')[1] || '');
     const category = urlParams.get('category');
+    const search = urlParams.get('search');
+    
     if (category) {
       setFilters(prev => ({
         ...prev,
         categories: [category],
       }));
     }
+    
+    if (search) {
+      // If there's a search term, we'll use it to filter products
+      // The search will be handled by the API call
+    }
   }, [location]);
 
+  // Build query string for API call
+  const buildQueryString = () => {
+    const urlParams = new URLSearchParams(location.split('?')[1] || '');
+    const apiParams = new URLSearchParams();
+    
+    const search = urlParams.get('search');
+    const category = urlParams.get('category');
+    
+    if (search) apiParams.set('search', search);
+    if (category) apiParams.set('category', category);
+    
+    return apiParams.toString() ? `?${apiParams.toString()}` : '';
+  };
+
   const { data: products = [], isLoading, error } = useQuery<Product[]>({
-    queryKey: ["/api/products"],
+    queryKey: [`/api/products${buildQueryString()}`],
   });
 
   const filteredAndSortedProducts = useMemo(() => {
