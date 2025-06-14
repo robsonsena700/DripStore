@@ -11,7 +11,7 @@
     "db:push": "drizzle-kit push",
     "homepage": "https://robsonsena700.github.io/DripStore",
     "predeploy": "vite build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist/public"
 
   },
   "dependencies": {
