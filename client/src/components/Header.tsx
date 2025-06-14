@@ -63,15 +63,26 @@ export default function Header() {
                 Products
               </span>
             </Link>
-            <span className="text-light-gray hover:text-primary-color font-medium transition-colors cursor-pointer">
-              Categories
-            </span>
-            <span className="text-light-gray hover:text-primary-color font-medium transition-colors cursor-pointer">
-              About
-            </span>
-            <span className="text-light-gray hover:text-primary-color font-medium transition-colors cursor-pointer">
-              Contact
-            </span>
+            <Link href="/products?category=tenis">
+              <span className="text-light-gray hover:text-primary-color font-medium transition-colors cursor-pointer">
+                Tênis
+              </span>
+            </Link>
+            <Link href="/products?category=camiseta">
+              <span className="text-light-gray hover:text-primary-color font-medium transition-colors cursor-pointer">
+                Camisetas
+              </span>
+            </Link>
+            <Link href="/products?category=calca">
+              <span className="text-light-gray hover:text-primary-color font-medium transition-colors cursor-pointer">
+                Calças
+              </span>
+            </Link>
+            <Link href="/products?category=bone">
+              <span className="text-light-gray hover:text-primary-color font-medium transition-colors cursor-pointer">
+                Bonés
+              </span>
+            </Link>
           </nav>
 
           {/* Search and Cart */}

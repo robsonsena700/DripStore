@@ -22,8 +22,8 @@ export default function HomePage() {
         />
         <div className="relative max-w-2xl">
           <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-            MODA<br />
-            <span className="text-primary-color">URBANA</span>
+            Queima<br />
+            <span className="text-primary-color">stoque Nike</span>
           </h1>
           <p className="text-xl mb-8 text-gray-300">
             Descubra os melhores tênis, camisetas, calças e bonés. Estilo autêntico para quem tem personalidade.
@@ -31,11 +31,11 @@ export default function HomePage() {
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/products">
               <Button className="bg-primary-color hover:bg-tertiary-color text-white px-8 py-4 rounded-lg font-semibold transition-colors transform hover:scale-105">
-                COMPRAR AGORA
+                VER OFERTAS
               </Button>
             </Link>
             <Button variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-gray-900 px-8 py-4 rounded-lg font-semibold transition-all">
-              VER COLEÇÃO
+              COMPRAR AGORA
             </Button>
           </div>
         </div>
@@ -44,7 +44,7 @@ export default function HomePage() {
       {/* Featured Products Section */}
       <Section backgroundColor="gray" padding="medium">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-dark-gray mb-4">PRODUTOS EM DESTAQUE</h2>
+          <h2 className="text-4xl font-bold text-dark-gray mb-4">Coleções em destaque</h2>
           <p className="text-light-gray text-lg max-w-2xl mx-auto">
             Seleção especial dos melhores tênis, camisetas, calças e bonés para o seu estilo
           </p>
